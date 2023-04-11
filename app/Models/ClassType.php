@@ -10,6 +10,6 @@ class ClassType extends Model
     use HasFactory;
 
     public function scheduledClasses() {
-        $this->hasMany(ScheduledClass::class);
+        return $this->hasMany(ScheduledClass::class);
     }
 }
