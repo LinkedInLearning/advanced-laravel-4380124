@@ -31,6 +31,8 @@ Route::resource('/instructor/schedule', ScheduledClassController::class)
 ->only(['index', 'create', 'store', 'destroy'])
 ->middleware(['auth','role:instructor']);
 
+
+
 /* Member routes */
 Route::middleware(['auth','role:member'])->group(function() {
     Route::get('/member/dashboard', function () {
@@ -41,6 +43,8 @@ Route::middleware(['auth','role:member'])->group(function() {
     Route::get('/member/bookings', [BookingController::class, 'index'])->name('booking.index');
     Route::delete('/member/bookings', [BookingController::class, 'destroy'])->name('booking.destroy');
 });
+
+
 
 Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
