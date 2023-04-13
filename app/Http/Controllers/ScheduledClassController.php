@@ -61,8 +61,8 @@ class ScheduledClassController extends Controller
 
         ClassCanceled::dispatch($schedule);
 
-        $schedule->delete();
         $schedule->members()->detach();
+        $schedule->delete();
 
         return redirect()->route('schedule.index');
     }
