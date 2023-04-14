@@ -72,4 +72,28 @@ class InstructorTest extends TestCase
             'id' => $scheduledClass->id
         ]);
     }
+
+    public function test_cannot_cancel_class_less_than_two_hours_before() {
+        $user = User::factory()->create([
+            'role' => 'instructor'
+        ]);
+        $this->seed(ClassTypeSeeder::class);
+        $scheduledClass = ScheduledClass::create([
+            'instructor_id' => $user->id,
+            'class_type_id' => ClassType::first()->id,
+            'date_time' => now()->addHours(1)->minutes(0)->seconds(0)
+        ]);
+        
+        $response = $this->actingAs($user)
+            ->get('instructor/schedule');
+
+        $response->assertDontSeeText('Cancel');
+
+        $response = $this->actingAs($user)
+            ->delete('/instructor/schedule/'.$scheduledClass->id);
+
+        $this->assertDatabaseHas('scheduled_classes',[
+            'id' =>$scheduledClass->id
+        ]);
+    }
 }
