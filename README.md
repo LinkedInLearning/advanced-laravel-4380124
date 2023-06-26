@@ -1,7 +1,10 @@
 # Advanced Laravel
-This is the repository for the LinkedIn Learning course `Advanced Laravel`. The full course is available from [LinkedIn Learning][lil-course-url].
+This is the repository for the LinkedIn Learning course Advanced Laravel. The full course is available from [LinkedIn Learning][lil-course-url].
 
-_See the readme file in the main branch for updated instructions and information._
+![Advanced Laravel][lil-thumbnail-url] 
+
+As an open-source web application framework, Laravel offers you expressive, elegant syntax and an enjoyable creative experience. But how can you make the most of its features? In this course, full-stack web developer and tech educator Shruti Balasa guides you through advanced concepts in Laravel. Go over how to establish project requirements and set up your project. Learn how to create user roles, write your own middleware, use gates, and more. Dive into advanced eloquent features, including many-to-many relationships, eager loading, attaching and detaching relationships, and writing complex queries and query scopes. Find out how to do more with custom commands, events, listeners, and logs. Explore the intricacies of notifications, queueing, and scheduling, then step through the process of testing in Laravel. Plus, gain an understanding of how Laravel works, including the role of service containers and service providers, as well as how Facades work.
+
 ## Instructions
 This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
 
@@ -66,9 +69,15 @@ To resolve this issue:
     ```
 10. Go to localhost on your browser to view the application
 
+### Instructor
 
-[0]: # (Replace these placeholder URLs with actual course URLs)
+Shruti Balasa 
+                            
 
-[lil-course-url]: https://www.linkedin.com/learning/
-[lil-thumbnail-url]: http://
 
+                            
+
+Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/shruti-balasa).
+
+[lil-course-url]: https://www.linkedin.com/learning/advanced-laravel-22373805?dApp=59033956&leis=LAA
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/D560DAQFlZrRMt3ahvA/learning-public-crop_288_512/0/1686070664741?e=2147483647&v=beta&t=oOWqD3uZY2p70h1YkCIJe4pTocxB-tD-exrZl9W5rPk
